@@ -569,30 +569,34 @@
                         <li>根據記憶程度選擇「重來」、「困難」、「良好」或「簡單」</li>
                     </ul>
 
-                    <p><strong>使用教學</strong></p>
-                    <p><li><a href="https://www.youtube.com/watch?v=rMlk97ecKUw" target="_blank">阿姨我決定要繼續努力了！使用卡片軟體 Anki 學會任何東西 + 輕鬆應付考試！
-</a></li></p>
+                    <p><strong>使用教學:</strong></p>
+                    <ul>
+                        <li><a href="https://www.youtube.com/watch?v=rMlk97ecKUw" target="_blank">阿姨我決定要繼續努力了！
+                            </a></li>
+                         <li><a href="https://reurl.cc/oKj2Qg" target="_blank">醫學生的K書法：Anki使用心得（上）-基礎概念＆模版分享
+                            </a></li>
+                    </ul>
                 </div>
 
                 <div id="contact2" class="sub-content">
                     <h3 style="color: #284ab9; margin-bottom: 15px;">💾 下載 Anki</h3>
 
-                    <p><strong>官方網站</strong></p>
+                    <p><strong>官方網站:</strong></p>
                     <ul>
                         <li><a href="https://apps.ankiweb.net/#downloads" target="_blank">此為Windows / Mac / Linux 適用</a></li>
                         <li><a href="https://apps.apple.com/tw/app/ankimobile-flashcards/id373493387" target="_blank">此為iOS/ipadOS適用</a></li>
                         <li><a href="https://play.google.com/store/apps/details?id=com.ichi2.anki&hl=zh_TW" target="_blank">此為Android適用</a></li>
-                        <li><a href="https://ankiweb.net/about7" target="_blank">此為網頁版，各平台適用</a></li>
+                        <li><a href="https://ankiweb.net/about7" target="_blank">此為網頁版，各平台適用(ankiweb)</a></li>
                     </ul>
 
-                    <p><strong>簡介</strong></p>
+                    <p><strong>簡介:</strong></p>
                     <ul>
-                        <li>優點是介面簡單，缺點是不能使用填空題，而且我單字題型會放發音外掛，他沒辦法發音出來</li>
-                        <li>建議先載電腦板把附加元件跟卡組載好，出門可以用手機或平板做題庫</li>
-                        <li>iOS跟iPadOS用戶不想先付錢可以先用這個，AppStore裡的程式是$790那個，不要載錯了，下載後的功能跟電腦版一樣，覺得自己會長期使用的斟酌下載，我會持續更新到我考完試，或是可以製作你們自己想學習的卡組</li>
-                        <li>Android用戶可以直接載AnkiDroid</li>
+                        <li>ankiweb優點是介面簡單，缺點是不能使用填空題，而且我單字題型會放發音外掛，他沒辦法發音出來。</li>
+                        <li>建議先載電腦板把附加元件跟卡組載好，出門可以用手機或平板做題庫。</li>
+                        <li>iOS跟iPadOS用戶不想先付錢可以先在移動裝置上使用ankiweb，下載後的功能跟電腦版一樣，覺得自己會長期使用的斟酌下載，我會持續更新到我考完試，或是可以製作你們自己想學習的卡組。</li>
+                        <li>Android用戶可以直接載AnkiDroid。</li>
                     </ul>
-                    <p><strong>下載附加元件</strong></p>
+                    <p><strong>下載附加元件:</strong></p>
                     <ul>
                         <li><a href="https://ankiweb.net/shared/info/1436550454" target="_blank">單字發音</a></li>
                         <li>下載方式可看PAPAYA的教學</li>
@@ -602,29 +606,122 @@
                 <div id="contact3" class="sub-content">
                     <h3 style="color: #284ab9; margin-bottom: 15px;">📚 字卡資源</h3>
                     <p><strong>航空維修相關字卡：</strong></p>
-                        <!-- 標籤篩選區 -->
+                     
+                    <!-- 標籤篩選區 -->
                 <div class="filter-section">
                     <div class="filter-title">🏷️ 快速篩選：</div>
-                    <div class="filter-tags">
-                        <span class="filter-tag all active" onclick="filterResources('all')">全部顯示</span>
-                        <span class="filter-tag" onclick="filterResources('題庫')">📚 題庫</span>
-                        <span class="filter-tag" onclick="filterResources('英文單字')">📝 英文單字</span>
-                        <span class="filter-tag" onclick="filterResources('通用')">🎥 通用</span>
-                        <span class="filter-tag" onclick="filterResources('M1')">M1</span>
-                        <span class="filter-tag" onclick="filterResources('M2')">M2</span>
-                        <span class="filter-tag" onclick="filterResources('M3')">M3</span>
-                        <span class="filter-tag" onclick="filterResources('M4')">M4</span>
-                        <span class="filter-tag" onclick="filterResources('M5')">M5</span>
-                        <span class="filter-tag" onclick="filterResources('M6')">M6</span>
-                        <span class="filter-tag" onclick="filterResources('M7A')">M7A</span>
-                        <span class="filter-tag" onclick="filterResources('M8')">M8</span>
-                        <span class="filter-tag" onclick="filterResources('M9')">M9</span>
-                        <span class="filter-tag" onclick="filterResources('M10')">M10</span>
-                        <span class="filter-tag" onclick="filterResources('M11A')">M11A</span>
-                        <span class="filter-tag" onclick="filterResources('M15')">M15</span>
-                        <span class="filter-tag" onclick="filterResources('M17A')">M17A</span>
-                        <span class="filter-tag" onclick="filterResources('通用')">通用</span>
+                    <div class="filter-tags" id="ankiFilterTags">
+                        <span class="filter-tag all active" onclick="filterAnkiCards('all')">全部顯示</span>
+                        <span class="filter-tag" onclick="filterAnkiCards('題庫')">📚 題庫</span>
+                        <span class="filter-tag" onclick="filterAnkiCards('英文單字')">📝 英文單字</span>
+                        <span class="filter-tag" onclick="filterAnkiCards('通用')">通用</span>
+                        <span class="filter-tag" onclick="filterAnkiCards('每周單字')">每周單字</span>
+                        <span class="filter-tag" onclick="filterAnkiCards('M1')">M1</span>
+                        <span class="filter-tag" onclick="filterAnkiCards('M2')">M2</span>
+                        <span class="filter-tag" onclick="filterAnkiCards('M3')">M3</span>
+                        <span class="filter-tag" onclick="filterAnkiCards('M4')">M4</span>
+                        <span class="filter-tag" onclick="filterAnkiCards('M5')">M5</span>
+                        <span class="filter-tag" onclick="filterAnkiCards('M6')">M6</span>
+                        <span class="filter-tag" onclick="filterAnkiCards('M7A')">M7A</span>
+                        <span class="filter-tag" onclick="filterAnkiCards('M8')">M8</span>
+                        <span class="filter-tag" onclick="filterAnkiCards('M9')">M9</span>
+                        <span class="filter-tag" onclick="filterAnkiCards('M10')">M10</span>
+                        <span class="filter-tag" onclick="filterAnkiCards('M11A')">M11A</span>
+                        <span class="filter-tag" onclick="filterAnkiCards('M15')">M15</span>
+                        <span class="filter-tag" onclick="filterAnkiCards('M17A')">M17A</span>
                     </div>
+                </div>
+                <!-- 資源卡片網格 -->
+                <div class="resource-grid" id="ankiResourceGrid">
+                    <!-- 通用 -->
+                    <div class="resource-card" data-tags="英文單字,通用">
+                        <h3>ATA100</h3>
+                        <div class="resource-tags">
+                            <span class="resource-tag">📝 英文單字</span>
+                            <span class="resource-tag">通用</span>
+                        </div>
+                        <p>ATA100</p>
+                        <a href="https://drive.google.com/uc?export=download&id=1PphqekNYn6jGnUmrNH9HUnBVQheSDViw" class="resource-link" download>📥 下載字卡</a>
+                    </div>
+                    
+                    <div class="resource-card" data-tags="英文單字,通用">
+                        <div class="resource-tags">
+                            <span class="resource-tag">📝 英文單字</span>
+                            <span class="resource-tag">通用</span>
+                        </div>
+                        <a href="https://drive.google.com/uc?export=download&id=14hA_xzY6Vs5KPDYt_tEpUS_Iyy6nb7bv" class="resource-link" download>📥 下載字卡</a>
+                    </div>
+
+                    <!-- M1 數學 -->
+                    <div class="resource-card" data-tags="英文單字,M1">
+                        <h3>M1 數學英文單字</h3>
+                        <div class="resource-tags">
+                            <span class="resource-tag">📝 英文單字</span>
+                            <span class="resource-tag">M1 數學</span>
+                        </div>
+                        <p>數學專業英文詞彙</p>
+                        <a href="https://drive.google.com/uc?export=download&id=13lSZOP039yJoJHqPtjJ9vygtLN35J_RW" class="resource-link">📥 下載教材</a>
+                    </div>
+
+                    <!-- M2 物理 -->
+                    <div class="resource-card" data-tags="英文單字,M2">
+                        <h3>M2 物理英文單字</h3>
+                        <div class="resource-tags">
+                            <span class="resource-tag">📝 英文單字</span>
+                            <span class="resource-tag">M2 物理</span>
+                        </div>
+                        <p>物理專業英文詞彙</p>
+                        <a href="#" class="resource-link">📥 即將上線</a>
+                    </div>
+
+                    <!-- 日常 -->
+                    <div class="resource-card" data-tags="英文單字,每周單字">
+                        <h3>0908~0912</h3>
+                        <div class="resource-tags">
+                            <span class="resource-tag">📝 英文單字</span>
+                            <span class="resource-tag">每周單字</span>
+                        </div>
+                        <p>其實上學期只有做了四周，因為後面懶了。</p>
+                        <a href="https://drive.google.com/uc?export=download&id=191RhDASWAl_d1cBvpx7ddQxCNJ_DrX16" class="resource-link">📥 下載教材</a>
+                    </div>
+
+                    <div class="resource-card" data-tags="英文單字,每周單字">
+                        <h3>0915~0919</h3>
+                        <div class="resource-tags">
+                            <span class="resource-tag">📝 英文單字</span>
+                            <span class="resource-tag">每周單字</span>
+                        </div>
+                        <p>我下學期不知道會不會繼續做每周單字，可能會可能不會，正如我前面所說的，我也不知道。</p>
+                        <a href="https://drive.google.com/uc?export=download&id=1nWL1vmu9KvLudmBwuvmtWj7saNxaaw61" class="resource-link">📥 下載教材</a>
+                    </div>
+
+                    <div class="resource-card" data-tags="英文單字,每周單字">
+                        <h3>0922~0926</h3>
+                        <div class="resource-tags">
+                            <span class="resource-tag">📝 英文單字</span>
+                            <span class="resource-tag">每周單字</span>
+                        </div>
+                        <p><a href="https://youtu.be/X2WH8mHJnhM?si=3RAch8gZfMN7MIxv&t=19" target="_blank">不要點</a></p>
+                        <a href="https://drive.google.com/uc?export=download&id=1hI3gVS3E0BUTICzJbUddMzX87pZy3waI" class="resource-link">📥 下載教材</a>
+                    </div>
+
+                    <div class="resource-card" data-tags="英文單字,每周單字">
+                        <h3>0930~1003</h3>
+                        <div class="resource-tags">
+                            <span class="resource-tag">📝 英文單字</span>
+                            <span class="resource-tag">每周單字</span>
+                        </div>
+                        <p>其實上學期只有做了四周，因為後面懶了</p>
+                        <a href="https://drive.google.com/uc?export=download&id=1hI3gVS3E0BUTICzJbUddMzX87pZy3waI" class="resource-link">📥 下載教材</a>
+                    </div>
+
+                </div>
+
+                <!-- 無結果提示 -->
+                <div class="no-results" id="ankiNoResults">
+                    <div class="no-results-icon">🔍</div>
+                    <h3>找不到相關字卡</h3>
+                    <p>試試選擇其他標籤，或點擊「全部顯示」查看所有字卡</p>
                 </div>
                     <p style="margin-top: 15px;"><strong>如何分享字卡：</strong></p>
                     <ul>
@@ -690,11 +787,51 @@
             tabs[messageNumber - 1].classList.add('active');
         }
 
-        // 標籤篩選功能
+        // 標籤篩選功能（資料中心）
         function filterResources(tag) {
-            const cards = document.querySelectorAll('.resource-card');
-            const filterTags = document.querySelectorAll('.filter-tag');
+            const cards = document.querySelectorAll('#message2 .resource-card');
+            const filterTags = document.querySelectorAll('#message2 .filter-tag');
             const noResults = document.getElementById('noResults');
+            let hasResults = false;
+
+            // 更新標籤按鈕狀態
+            filterTags.forEach(t => t.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // 篩選卡片
+            cards.forEach(card => {
+                const cardTagsString = card.getAttribute('data-tags');
+                
+                if (tag === 'all') {
+                    card.classList.add('show');
+                    hasResults = true;
+                } else {
+                    // 將標籤字串分割成陣列，並檢查是否有完全匹配的標籤
+                    const cardTagsArray = cardTagsString.split(',');
+                    const hasMatch = cardTagsArray.some(cardTag => cardTag.trim() === tag);
+                    
+                    if (hasMatch) {
+                        card.classList.add('show');
+                        hasResults = true;
+                    } else {
+                        card.classList.remove('show');
+                    }
+                }
+            });
+
+            // 顯示/隱藏無結果提示
+            if (hasResults) {
+                noResults.classList.remove('show');
+            } else {
+                noResults.classList.add('show');
+            }
+        }
+
+        // Anki 字卡篩選功能
+        function filterAnkiCards(tag) {
+            const cards = document.querySelectorAll('#ankiResourceGrid .resource-card');
+            const filterTags = document.querySelectorAll('#ankiFilterTags .filter-tag');
+            const noResults = document.getElementById('ankiNoResults');
             let hasResults = false;
 
             // 更新標籤按鈕狀態
@@ -733,6 +870,7 @@
         // 初始化：顯示所有資源
         window.addEventListener('DOMContentLoaded', function() {
             filterResources('all');
+            filterAnkiCards('all');
         });
 
         // Anki 字卡子分頁切換
