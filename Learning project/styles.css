@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'STZhongsong', 'Microsoft JhengHei', serif;
+    background: linear-gradient(135deg, #6b7a8f 0%, #a8c0d8 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 2000px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.tabs {
+    display: flex;
+    background: #f8f9fa;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.tab {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    color: #6c757d;
+    border-bottom: 3px solid transparent;
+}
+
+.tab:hover {
+    background: #e9ecef;
+    color: #495057;
+}
+
+.tab.active {
+    color: #284ab9;
+    background: white;
+    border-bottom: 3px solid #284ab9;
+}
+
+.content {
+    padding: 40px;
+    min-height: 300px;
+}
+
+.message {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.message.active {
+    display: block;
+}
+
+.message h2 {
+    color: #284ab9;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.message p {
+    color: #000000;
+    line-height: 1.8;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.message ul {
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.message li {
+    color: #000000;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.sub-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.sub-tab {
+    padding: 10px 20px;
+    background: #e8f0ff;
+    border: 2px solid #284ab9;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    color: #284ab9;
+}
+
+.sub-tab:hover {
+    background: #d0e2ff;
+    transform: translateY(-2px);
+}
+
+.sub-tab.active {
+    background: #284ab9;
+    color: white;
+}
+
+.sub-content {
+    display: none;
+}
+
+.sub-content.active {
+    display: block;
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .tab {
+        padding: 15px 10px;
+        font-size: 14px;
+    }
+
+    .content {
+        padding: 30px 20px;
+    }
+
+    .message h2 {
+        font-size: 24px;
+    }
+}

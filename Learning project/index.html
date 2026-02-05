@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning-Porject</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <div class="tab active" onclick="showMessage(1)">關於</div>
+            <div class="tab" onclick="showMessage(2)">資料庫</div>
+            <div class="tab" onclick="showMessage(3)">Anki字卡</div>
+            <div class="tab" onclick="showMessage(4)">題庫整理</div>
+        </div>
+
+        <div class="content">
+            <div id="message1" class="message active">
+                <span class="icon">👋</span>
+                <h2>Learning Project</h2>
+                <p>這裡讓大家更直觀的找自己需要的資料</p>
+                <p>希望大家低調使用</p>
+                <p>問題回報、推薦資料:</p>
+            </div>
+
+            <div id="message2" class="message">
+                <span class="icon">🗄️</span>
+                <h2>資料庫</h2>
+                <p>有老師給的，也有網路上找來的</p>
+                <p>有自己找到的資料想分享的話，可以到關於那邊寄資料給我</p>
+                
+                <div class="sub-tabs">
+                    <div class="sub-tab active" onclick="showSubContent(1)">M1 數學</div>
+                    <div class="sub-tab" onclick="showSubContent(2)">M2 物理</div>
+                    <div class="sub-tab" onclick="showSubContent(3)">M3 基礎電學</div>
+                    <div class="sub-tab" onclick="showSubContent(4)">M4 基礎電子學</div>
+                    <div class="sub-tab" onclick="showSubContent(5)">M5 儀表系統</div>
+                    <div class="sub-tab" onclick="showSubContent(6)">M6 材料與零件</div>
+                    <div class="sub-tab" onclick="showSubContent(7)">M7A 維修實務</div>
+                    <div class="sub-tab" onclick="showSubContent(8)">M8 空氣動力</div>
+                    <div class="sub-tab" onclick="showSubContent(9)">M9 人為因素</div>
+                    <div class="sub-tab" onclick="showSubContent(10)">M10 民航法規</div>
+                    <div class="sub-tab" onclick="showSubContent(11)">M11A 渦輪式發動結構與系統</div>
+                    <div class="sub-tab" onclick="showSubContent(12)">M15 渦輪式發動機</div>  
+                    <div class="sub-tab" onclick="showSubContent(13)">M17A 螺旋槳</div>
+                </div>
+
+                <div id="sub1" class="sub-content active">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">M1 數學</h3>
+                    <p> 女人會離開你， 兄弟會背叛你， 但數學不會。 數學不會就是不會。</p>
+                    <ul>
+                        <li><a href="https://drive.google.com/uc?export=download&id=14hA_xzY6Vs5KPDYt_tEpUS_Iyy6nb7bv" download="M1教材.pdf">M1教材</a></li>
+                        <li>使用者介面 (UI) 設計</li>
+                        <li>使用者體驗 (UX) 優化</li>
+                        <li>前端開發 (HTML, CSS, JavaScript)</li>
+                        <li>後端系統整合</li>
+                    </ul>
+                </div>
+
+                <div id="sub2" class="sub-content">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">📱 行動應用程式開發</h3>
+                    <p>專業的 App 開發團隊，打造流暢的行動體驗：</p>
+                    <ul>
+                        <li>iOS App 開發 (Swift, SwiftUI)</li>
+                        <li>Android App 開發 (Kotlin, Java)</li>
+                        <li>跨平台開發 (React Native, Flutter)</li>
+                        <li>App 上架協助與維護</li>
+                        <li>效能優化與測試</li>
+                    </ul>
+                </div>
+
+                <div id="sub3" class="sub-content">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">🚀 數位行銷策略</h3>
+                    <p>全方位的數位行銷方案，提升您的品牌影響力：</p>
+                    <ul>
+                        <li>SEO 搜尋引擎優化</li>
+                        <li>社群媒體經營與廣告投放</li>
+                        <li>內容行銷策略規劃</li>
+                        <li>數據分析與成效追蹤</li>
+                        <li>電子郵件行銷</li>
+                    </ul>
+                </div>
+
+                <div id="sub4" class="sub-content">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">💡 品牌顧問服務</h3>
+                    <p>協助企業建立獨特的品牌識別與市場定位：</p>
+                    <ul>
+                        <li>品牌策略規劃</li>
+                        <li>視覺識別系統設計</li>
+                        <li>市場調查與競爭分析</li>
+                        <li>品牌故事撰寫</li>
+                        <li>品牌形象管理</li>
+                    </ul>
+                </div>
+
+                <div id="sub5" class="sub-content">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">M5 儀表系統</h3>
+                    <p>待補充內容</p>
+                </div>
+
+                <div id="sub6" class="sub-content">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">M6 材料與零件</h3>
+                    <p>待補充內容</p>
+                </div>
+
+                <div id="sub7" class="sub-content">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">M7A 維修實務</h3>
+                    <p>待補充內容</p>
+                </div>
+
+                <div id="sub8" class="sub-content">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">M8 空氣動力</h3>
+                    <p>待補充內容</p>
+                </div>
+
+                <div id="sub9" class="sub-content">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">M9 人為因素</h3>
+                    <p>待補充內容</p>
+                </div>
+
+                <div id="sub10" class="sub-content">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">M10 民航法規</h3>
+                    <p>待補充內容</p>
+                </div>
+
+                <div id="sub11" class="sub-content">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">M11A 渦輪式發動結構與系統</h3>
+                    <p>待補充內容</p>
+                </div>
+
+                <div id="sub12" class="sub-content">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">M15 渦輪式發動機</h3>
+                    <p>待補充內容</p>
+                </div>
+
+                <div id="sub13" class="sub-content">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">M17A 螺旋槳</h3>
+                    <p>待補充內容</p>
+                </div>
+            </div>
+
+            <div id="message3" class="message">
+                <span class="icon">📞</span>
+                <h2>與我們聯繫</h2>
+                <p>我們很樂意聽到您的聲音！請選擇聯繫方式：</p>
+                
+                <div class="sub-tabs">
+                    <div class="sub-tab active" onclick="showSubContent2(1)">聯絡資訊</div>
+                    <div class="sub-tab" onclick="showSubContent2(2)">營業據點</div>
+                    <div class="sub-tab" onclick="showSubContent2(3)">線上客服</div>
+                </div>
+
+                <div id="contact1" class="sub-content active">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">📧 基本聯絡資訊</h3>
+                    <p><strong>電子郵件：</strong> info@example.com</p>
+                    <p><strong>客服信箱：</strong> support@example.com</p>
+                    <p><strong>商務合作：</strong> business@example.com</p>
+                    <p><strong>客服專線：</strong> +886-2-1234-5678</p>
+                    <p><strong>傳真號碼：</strong> +886-2-1234-5679</p>
+                    <p><strong>服務時間：</strong> 週一至週五 9:00 - 18:00</p>
+                </div>
+
+                <div id="contact2" class="sub-content">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">📍 營業據點</h3>
+                    <p><strong>台北總部：</strong></p>
+                    <p>地址：台北市信義區信義路五段7號</p>
+                    <p>電話：+886-2-1234-5678</p>
+                    <p style="margin-top: 15px;"><strong>台中分公司：</strong></p>
+                    <p>地址：台中市西屯區台灣大道三段99號</p>
+                    <p>電話：+886-4-2345-6789</p>
+                    <p style="margin-top: 15px;"><strong>高雄分公司：</strong></p>
+                    <p>地址：高雄市前鎮區中山二路5號</p>
+                    <p>電話：+886-7-3456-7890</p>
+                </div>
+
+                <div id="contact3" class="sub-content">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">💬 線上客服管道</h3>
+                    <p><strong>即時線上聊天：</strong></p>
+                    <p>週一至週五 9:00 - 21:00 提供即時客服</p>
+                    <p style="margin-top: 15px;"><strong>社群媒體：</strong></p>
+                    <ul>
+                        <li>Facebook 粉絲專頁：@ExampleCompany</li>
+                        <li>Instagram：@example_company</li>
+                        <li>LINE 官方帳號：@example</li>
+                    </ul>
+                    <p style="margin-top: 15px;">我們會在24小時內回覆您的訊息！</p>
+                </div>
+            </div>
+
+            <div id="message4" class="message">
+                <span class="icon">🎉</span>
+                <h2>最新動態</h2>
+                <p>掌握我們的最新資訊與活動：</p>
+                
+                <div class="sub-tabs">
+                    <div class="sub-tab active" onclick="showSubContent3(1)">產品更新</div>
+                    <div class="sub-tab" onclick="showSubContent3(2)">優惠活動</div>
+                    <div class="sub-tab" onclick="showSubContent3(3)">公司動態</div>
+                </div>
+
+                <div id="news1" class="sub-content active">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">🚀 最新產品更新</h3>
+                    <p><strong>2025年2月：全新互動式網頁設計服務</strong></p>
+                    <p>我們推出了全新的互動式網頁設計方案，提供更豐富的使用者體驗和更流暢的介面操作。</p>
+                    <p style="margin-top: 15px;"><strong>主要特色：</strong></p>
+                    <ul>
+                        <li>響應式設計，完美適配所有裝置</li>
+                        <li>動態互動元素與動畫效果</li>
+                        <li>優化的載入速度</li>
+                        <li>符合 SEO 最佳實踐</li>
+                    </ul>
+                </div>
+
+                <div id="news2" class="sub-content">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">🎁 限時優惠活動</h3>
+                    <p><strong>新春特惠方案 - 2月限定</strong></p>
+                    <p>為慶祝新年，我們推出了超值優惠方案！</p>
+                    <p style="margin-top: 15px;"><strong>優惠內容：</strong></p>
+                    <ul>
+                        <li>新客戶首次合作享 8 折優惠</li>
+                        <li>推薦好友雙方各得 500 元折扣</li>
+                        <li>年約客戶額外贈送免費維護服務</li>
+                    </ul>
+                    <p style="margin-top: 15px;">優惠至 2025 年 2 月底，把握機會立即聯繫我們！</p>
+                </div>
+
+                <div id="news3" class="sub-content">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">📢 公司最新動態</h3>
+                    <p><strong>團隊擴編與新辦公室啟用</strong></p>
+                    <p>為了提供更好的服務品質，我們很高興宣布團隊規模擴大，並於台中設立新的分公司。</p>
+                    <p style="margin-top: 15px;"><strong>2025年1月：榮獲最佳數位服務獎</strong></p>
+                    <p>感謝客戶的支持與信任，我們榮獲「2024年度最佳數位服務獎」，這是對我們團隊最大的肯定！</p>
+                    <p style="margin-top: 15px;">我們將持續努力,為客戶創造更多價值。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
