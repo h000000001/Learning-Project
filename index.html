@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Project</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'STZhongsong', 'Microsoft JhengHei', serif;
+            background: linear-gradient(135deg, #6b7a8f 0%, #a8c0d8 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 2000px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .tabs {
+            display: flex;
+            background: #f8f9fa;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        .tab {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            color: #6c757d;
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab:hover {
+            background: #e9ecef;
+            color: #495057;
+        }
+
+        .tab.active {
+            color: #284ab9;
+            background: white;
+            border-bottom: 3px solid #284ab9;
+        }
+
+        .content {
+            padding: 40px;
+            min-height: 300px;
+        }
+
+        .message {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .message.active {
+            display: block;
+        }
+
+        .message h2 {
+            color: #284ab9;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .message p {
+            color: #000000;
+            line-height: 1.8;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .message ul {
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+
+        .message li {
+            color: #000000;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .sub-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .sub-tab {
+            padding: 10px 20px;
+            background: #e8f0ff;
+            border: 2px solid #284ab9;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            color: #284ab9;
+        }
+
+        .sub-tab:hover {
+            background: #d0e2ff;
+            transform: translateY(-2px);
+        }
+
+        .sub-tab.active {
+            background: #284ab9;
+            color: white;
+        }
+
+        .sub-content {
+            display: none;
+        }
+
+        .sub-content.active {
+            display: block;
+            animation: fadeIn 0.4s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .tab {
+                padding: 15px 10px;
+                font-size: 14px;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            .message h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <div class="tab active" onclick="showMessage(1)">關於</div>
+            <div class="tab" onclick="showMessage(2)">資料庫</div>
+            <div class="tab" onclick="showMessage(3)">Anki字卡</div>
+            <div class="tab" onclick="showMessage(4)">題庫整理</div>
+        </div>
+
+        <div class="content">
+            <div id="message1" class="message active">
+                <span class="icon">👋</span>
+                <h2>Learning Project</h2>
+                <p>這裡讓大家更直觀的找自己需要的資料</p>
+                <p>希望大家低調使用</p>
+                <p>問題回報、推薦資料:</p>
+            </div>
+
+            <div id="message2" class="message">
+                <span class="icon">🗄️</span>
+                <h2>資料庫</h2>
+                <p>有老師給的，也有網路上找來的</p>
+                <p>有自己找到的資料想分享的話，可以到關於那邊寄資料給我</p>
+                
+                <div class="sub-tabs">
+                    <div class="sub-tab active" onclick="showSubContent(1)">M1 數學</div>
+                    <div class="sub-tab" onclick="showSubContent(2)">M2 物理</div>
+                    <div class="sub-tab" onclick="showSubContent(3)">M3 基礎電學</div>
+                    <div class="sub-tab" onclick="showSubContent(4)">M4 基礎電子學</div>
+                    <div class="sub-tab" onclick="showSubContent(5)">M5 儀表系統</div>
+                    <div class="sub-tab" onclick="showSubContent(6)">M6 材料與零件</div>
+                    <div class="sub-tab" onclick="showSubContent(7)">M7A 維修實務</div>
+                    <div class="sub-tab" onclick="showSubContent(8)">M8 空氣動力</div>
+                    <div class="sub-tab" onclick="showSubContent(9)">M9 人為因素</div>
+                    <div class="sub-tab" onclick="showSubContent(10)">M10 民航法規</div>
+                    <div class="sub-tab" onclick="showSubContent(11)">M11A 渦輪式發動結構與系統</div>
+                    <div class="sub-tab" onclick="showSubContent(12)">M15 渦輪式發動機</div>  
+                    <div class="sub-tab" onclick="showSubContent(13)">M17A 螺旋槳</div>
+                </div>
+
+                <div id="sub1" class="sub-content active">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">M1 數學</h3>
+                    <p>女人會離開你，兄弟會背叛你，但數學不會。數學不會就是不會。</p>
+                    <ul>
+                        <li><a href="https://drive.google.com/uc?export=download&id=14hA_xzY6Vs5KPDYt_tEpUS_Iyy6nb7bv" download="M1教材.pdf">M1教材</a></li>
+                    </ul>
+                </div>
+
+                <div id="sub2" class="sub-content">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">M2 物理</h3>
+                    <p>待補充內容</p>
+                </div>
+
+                <div id="sub3" class="sub-content">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">M3 基礎電學</h3>
+                    <p>待補充內容</p>
+                </div>
+
+                <div id="sub4" class="sub-content">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">M4 基礎電子學</h3>
+                    <p>待補充內容</p>
+                </div>
+
+                <div id="sub5" class="sub-content">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">M5 儀表系統</h3>
+                    <p>待補充內容</p>
+                </div>
+
+                <div id="sub6" class="sub-content">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">M6 材料與零件</h3>
+                    <p>待補充內容</p>
+                </div>
+
+                <div id="sub7" class="sub-content">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">M7A 維修實務</h3>
+                    <p>待補充內容</p>
+                </div>
+
+                <div id="sub8" class="sub-content">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">M8 空氣動力</h3>
+                    <p>待補充內容</p>
+                </div>
+
+                <div id="sub9" class="sub-content">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">M9 人為因素</h3>
+                    <p>待補充內容</p>
+                </div>
+
+                <div id="sub10" class="sub-content">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">M10 民航法規</h3>
+                    <p>待補充內容</p>
+                </div>
+
+                <div id="sub11" class="sub-content">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">M11A 渦輪式發動結構與系統</h3>
+                    <p>待補充內容</p>
+                </div>
+
+                <div id="sub12" class="sub-content">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">M15 渦輪式發動機</h3>
+                    <p>待補充內容</p>
+                </div>
+
+                <div id="sub13" class="sub-content">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">M17A 螺旋槳</h3>
+                    <p>待補充內容</p>
+                </div>
+            </div>
+
+            <div id="message3" class="message">
+                <span class="icon">📞</span>
+                <h2>Anki字卡</h2>
+                <p>Anki 是一個強大的記憶卡片軟體，使用間隔重複法幫助記憶</p>
+                
+                <div class="sub-tabs">
+                    <div class="sub-tab active" onclick="showSubContent2(1)">使用說明</div>
+                    <div class="sub-tab" onclick="showSubContent2(2)">下載連結</div>
+                    <div class="sub-tab" onclick="showSubContent2(3)">字卡資源</div>
+                </div>
+
+                <div id="contact1" class="sub-content active">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">📖 Anki 使用說明</h3>
+                    <p><strong>什麼是 Anki？</strong></p>
+                    <p>Anki 是一款開源的記憶軟體，透過科學的間隔重複演算法，幫助你有效記憶學習內容。</p>
+                    <p style="margin-top: 15px;"><strong>基本使用方式：</strong></p>
+                    <ul>
+                        <li>下載並安裝 Anki 軟體</li>
+                        <li>匯入字卡檔案（.apkg 格式）</li>
+                        <li>每天固定時間複習</li>
+                        <li>根據記憶程度選擇「重來」、「困難」、「良好」或「簡單」</li>
+                    </ul>
+                </div>
+
+                <div id="contact2" class="sub-content">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">💾 下載 Anki</h3>
+                    <p><strong>官方網站：</strong></p>
+                    <p><a href="https://apps.ankiweb.net/" target="_blank">https://apps.ankiweb.net/</a></p>
+                    <p style="margin-top: 15px;"><strong>支援平台：</strong></p>
+                    <ul>
+                        <li>Windows / Mac / Linux 桌面版</li>
+                        <li>iPhone / iPad (AnkiMobile)</li>
+                        <li>Android (AnkiDroid - 免費)</li>
+                        <li>網頁版 (AnkiWeb)</li>
+                    </ul>
+                </div>
+
+                <div id="contact3" class="sub-content">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">📚 字卡資源</h3>
+                    <p><strong>航空維修相關字卡：</strong></p>
+                    <p>待補充 - 字卡製作中</p>
+                    <p style="margin-top: 15px;"><strong>如何分享字卡：</strong></p>
+                    <ul>
+                        <li>在 Anki 中匯出牌組（檔案 → 匯出）</li>
+                        <li>選擇 .apkg 格式</li>
+                        <li>將檔案分享給我們</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="message4" class="message">
+                <span class="icon">🎉</span>
+                <h2>題庫整理</h2>
+                <p>各科目考古題與練習題整理</p>
+                
+                <div class="sub-tabs">
+                    <div class="sub-tab active" onclick="showSubContent3(1)">考古題</div>
+                    <div class="sub-tab" onclick="showSubContent3(2)">練習題</div>
+                    <div class="sub-tab" onclick="showSubContent3(3)">模擬考</div>
+                </div>
+
+                <div id="news1" class="sub-content active">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">📝 考古題資源</h3>
+                    <p><strong>歷屆考題整理：</strong></p>
+                    <p>待補充內容</p>
+                    <p style="margin-top: 15px;"><strong>使用建議：</strong></p>
+                    <ul>
+                        <li>先讀完教材再做題目</li>
+                        <li>做完題目要檢討錯誤</li>
+                        <li>重複練習弱項科目</li>
+                        <li>考前至少做過三遍</li>
+                    </ul>
+                </div>
+
+                <div id="news2" class="sub-content">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">✏️ 練習題</h3>
+                    <p><strong>分科練習題：</strong></p>
+                    <p>待補充內容</p>
+                    <p style="margin-top: 15px;"><strong>題目難度：</strong></p>
+                    <ul>
+                        <li>基礎題：熟悉基本概念</li>
+                        <li>進階題：應用與計算</li>
+                        <li>挑戰題：綜合題型</li>
+                    </ul>
+                </div>
+
+                <div id="news3" class="sub-content">
+                    <h3 style="color: #284ab9; margin-bottom: 15px;">🎯 模擬考試</h3>
+                    <p><strong>完整模擬考：</strong></p>
+                    <p>待補充內容</p>
+                    <p style="margin-top: 15px;"><strong>考試技巧：</strong></p>
+                    <ul>
+                        <li>控制作答時間</li>
+                        <li>先做會的題目</li>
+                        <li>不確定的題目做記號</li>
+                        <li>預留檢查時間</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showMessage(messageNumber) {
+            // 隱藏所有訊息
+            const messages = document.querySelectorAll('.message');
+            messages.forEach(msg => msg.classList.remove('active'));
+
+            // 移除所有標籤的 active 狀態
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            // 顯示選中的訊息
+            document.getElementById('message' + messageNumber).classList.add('active');
+
+            // 設定選中的標籤為 active
+            tabs[messageNumber - 1].classList.add('active');
+        }
+
+        function showSubContent(subNumber) {
+            // 隱藏所有子內容
+            const subContents = document.querySelectorAll('#message2 .sub-content');
+            subContents.forEach(content => content.classList.remove('active'));
+
+            // 移除所有子標籤的 active 狀態
+            const subTabs = document.querySelectorAll('#message2 .sub-tab');
+            subTabs.forEach(tab => tab.classList.remove('active'));
+
+            // 顯示選中的子內容
+            document.getElementById('sub' + subNumber).classList.add('active');
+
+            // 設定選中的子標籤為 active
+            subTabs[subNumber - 1].classList.add('active');
+        }
+
+        function showSubContent2(subNumber) {
+            // 隱藏所有聯絡方式子內容
+            const subContents = document.querySelectorAll('#message3 .sub-content');
+            subContents.forEach(content => content.classList.remove('active'));
+
+            // 移除所有聯絡方式子標籤的 active 狀態
+            const subTabs = document.querySelectorAll('#message3 .sub-tab');
+            subTabs.forEach(tab => tab.classList.remove('active'));
+
+            // 顯示選中的子內容
+            document.getElementById('contact' + subNumber).classList.add('active');
+
+            // 設定選中的子標籤為 active
+            subTabs[subNumber - 1].classList.add('active');
+        }
+
+        function showSubContent3(subNumber) {
+            // 隱藏所有最新消息子內容
+            const subContents = document.querySelectorAll('#message4 .sub-content');
+            subContents.forEach(content => content.classList.remove('active'));
+
+            // 移除所有最新消息子標籤的 active 狀態
+            const subTabs = document.querySelectorAll('#message4 .sub-tab');
+            subTabs.forEach(tab => tab.classList.remove('active'));
+
+            // 顯示選中的子內容
+            document.getElementById('news' + subNumber).classList.add('active');
+
+            // 設定選中的子標籤為 active
+            subTabs[subNumber - 1].classList.add('active');
+        }
+    </script>
+</body>
+</html>
